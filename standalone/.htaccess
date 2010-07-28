@@ -1,0 +1,89 @@
+<IfModule mod_autoindex.c>
+
+# 
+# PLEASE CHANGE THE DIRECTORY
+# /standalone/autoindex/ <- this needs to be changed to where you have the autoindex folder
+# 
+# Example:
+#	yourdomain.com/folder/autoindex/
+#	
+#	/standalone/autoindex/ <- should be changed to -> /folder/autoindex/
+# 
+# Tip: ctrl + f and do replace all
+
+#
+# IndexOptions: Controls the appearance of server-generated directory
+# listings.
+# Remove/replace the "Charset=UTF-8" if you don't use UTF-8 for your filenames.
+#
+IndexOptions FancyIndexing XHTML HTMLTable FoldersFirst SuppressRules SuppressDescription SuppressHTMLPreamble Charset=UTF-8 
+
+#
+# AddIcon* directives tell the server which icon to show for different
+# files or filename extensions.  These are only displayed for
+# FancyIndexed directories.
+#
+AddIcon /standalone/autoindex/icons/application.png .exe .app
+AddIcon /standalone/autoindex/icons/type_binary.png .bin .hqx .uu
+AddIcon /standalone/autoindex/icons/type_box.png .tar .tgz .tbz .tbz2 bundle .rar
+AddIcon /standalone/autoindex/icons/type_code.png .html .htm .htx .htmls .dhtml .phtml .shtml .inc .ssi .c .cc .css .h .rb .js .rb .pl .py .sh .shar .csh .ksh .tcl .as
+AddIcon /standalone/autoindex/icons/type_database.png .db .sqlite
+AddIcon /standalone/autoindex/icons/type_disc.png .iso .image
+AddIcon /standalone/autoindex/icons/type_document.png .ttf
+AddIcon /standalone/autoindex/icons/type_excel.png .xlsx .xls .xlm .xlt .xla .xlb .xld .xlk .xll .xlv .xlw
+AddIcon /standalone/autoindex/icons/type_flash.png .flv
+AddIcon /standalone/autoindex/icons/type_illustrator.png .ai .eps .epsf .epsi
+AddIcon /standalone/autoindex/icons/type_pdf.png .pdf
+AddIcon /standalone/autoindex/icons/type_php.png .php .phps .php5 .php3 .php4 .phtm
+AddIcon /standalone/autoindex/icons/type_photoshop.png .psd
+AddIcon /standalone/autoindex/icons/monitor.png .ps
+AddIcon /standalone/autoindex/icons/type_powerpoint.png .ppt .pptx .ppz .pot .pwz .ppa .pps .pow
+AddIcon /standalone/autoindex/icons/type_swf.png .swf
+AddIcon /standalone/autoindex/icons/type_text.png .tex .dvi
+AddIcon /standalone/autoindex/icons/type_vcf.png .vcf .vcard
+AddIcon /standalone/autoindex/icons/type_word.png .doc .docx
+AddIcon /standalone/autoindex/icons/type_zip.png .Z .z .tgz .gz .zip
+AddIcon /standalone/autoindex/icons/globe.png .wrl .wrl.gz .vrm .vrml .iv
+
+
+AddIconByType (TXT,/standalone/autoindex/icons/type_text.png) text/*
+AddIconByType (IMG,/standalone/autoindex/icons/type_image.png) image/*
+AddIconByType (SND,/standalone/autoindex/icons/type_audio.png) audio/*
+AddIconByType (VID,/standalone/autoindex/icons/type_video.png) video/*
+AddIconByEncoding (CMP,/standalone/autoindex/icons/type_box.png) x-compress x-gzip
+
+AddIcon /standalone/autoindex/icons/back.png ..
+AddIcon /standalone/autoindex/icons/information.png README INSTALL
+AddIcon /standalone/autoindex/icons/type_folder.png ^^DIRECTORY^^
+AddIcon /standalone/autoindex/icons/blank.png ^^BLANKICON^^
+
+#
+# DefaultIcon is which icon to show for files which do not have an icon
+# explicitly set.
+#
+DefaultIcon /standalone/autoindex/icons/type_document.png
+
+
+
+#
+# Enables PHP to be used in our header file
+#
+AddHandler application/x-httpd-php .php
+AddType text/html .php
+
+#
+# ReadmeName is the name of the README file the server will look for by
+# default, and append to directory listings.
+#
+# HeaderName is the name of a file which should be prepended to
+# directory indexes.
+ReadmeName /standalone/autoindex/footer.php
+HeaderName /standalone/autoindex/header.php
+
+#
+# IndexIgnore is a set of filenames which directory indexing should ignore
+# and not include in the listing.  Shell-style wildcarding is permitted.
+#
+IndexIgnore autoindex .??* *~ *# RCS CVS *,v *,t
+
+</IfModule>

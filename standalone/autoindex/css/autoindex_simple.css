@@ -1,0 +1,93 @@
+body {
+	font-family: helvetica Neue, helvetica, Arial;
+	font-size: 14px;
+}
+
+#page {
+	width: 750px;
+	background: #fff;
+	padding: 25px;
+}
+
+/*
+	The directory we are browsing
+*/
+.pathline {
+	border-radius: 3px;
+	background: #f3f3f3;
+	padding: 7px 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.pathline img {
+	width: 13px;
+	margin-right: 3px;
+}
+
+.pathline a {
+	color: #777;	
+}
+
+.pathline a:hover {
+	color: #333;
+}
+
+/*
+	Main table
+*/
+#page table a {
+	color: #222;
+}
+
+#page table {
+	width: 100%;
+	text-align: left;
+}
+
+#page table th {
+	padding: 5px 10px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+#page table td {
+	border-bottom: 1px solid #eee;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+#page table td a {
+	padding: 5px 0px 5px 0px;
+	display: block;
+	width: 500px;
+    white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow:ellipsis;
+	font-size: 13px;
+}
+
+#page table img {
+	vertical-align: middle;
+	width: 16px;
+}
+
+tr:hover td
+{
+	background: #f9f9f9;
+}
+
+/*
+	Footer
+*/
+
+#footer {
+	margin-top: 20px;
+}
+
+#footer address{
+	color: #aaa;
+	font-style: normal;
+	font-size: 12px;
+}

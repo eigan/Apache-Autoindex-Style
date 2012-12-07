@@ -1,22 +1,22 @@
 <?php
-	define('BASE_URL', dirname($_SERVER["SCRIPT_NAME"]));
-		
+	define('BASE_URL', "/autoindex");
+
 	function getPath() {
     	return dirname($_SERVER["REQUEST_URI"] . '/.');
 	}
-	
+
 	function createFilePath() {
 		$dir = getPath();
 		$result = $current = "";
 		$folders = explode('/', $dir);
-				
+
 		foreach($folders as $folder) {
 			if($folder != "" && $folder[0] != "?") {
 				$result .= '<a href="'.str_replace(' ', '+', $current.'/'.$folder).'">/' . str_replace('%20', ' ', $folder) . '</a>';
 				$current .= '/' . $folder;
 			}
 		}
-			
+
 		return $result;
 	}	
 ?>

@@ -1,11 +1,14 @@
 
-# ABOUT
+ABOUT
+-----
 A better looking directory listing for apache, I guess.
 
-# REQUIREMENTS
+REQUIREMENTS
+------------
 - PHP (atm. should change to cgi or something)
 
-# INSTALL
+INSTALL
+-------
 1. clone repo to somewhere safe on your server
 2. Open up apache httpd.conf and add this line:
 
@@ -14,11 +17,13 @@ A better looking directory listing for apache, I guess.
 3. Open autoindex.conf and edit the path on line 7 and 17.
 4. Restart Apache
 
-# EXAMPLE
+EXAMPLE
+-------
 ![example](http://i.solidfiles.net/b215662ded.png)
 
 
-# LICENSE
+LICENSE
+-------
 Icons		
 		
 	All Icons are Copyright © Yusuke Kamiyamane. All rights reserved. Licensed under a Creative Commons Attribution 3.0 license.

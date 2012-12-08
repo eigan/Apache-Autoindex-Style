@@ -5,7 +5,7 @@ A better looking directory listing for apache, I guess.
 
 REQUIREMENTS
 ------------
-- PHP (atm. should change to cgi or something)
+- PHP (atm. should change to cgi or something) help?
 
 INSTALL
 -------
@@ -13,9 +13,20 @@ INSTALL
 2. Open up apache httpd.conf and add this line:
 
 		Include <path/to/git-repo/>/autoindex.conf
+	
+	Make sure autoindex_module is installed and enabled
+	
+		LoadModule autoindex_module libexec/apache2/mod_autoindex.so
+
+	If found, comment out any reference to httpd-autoindex.conf. We are replacing this.
+
 
 3. Open autoindex.conf and edit the path on line 7 and 17.
 4. Restart Apache
+
+CUSTOM THEME
+----------------
+You can create your own .css file in the css folder and reference it in the header.html file, line 29. 
 
 EXAMPLE
 -------

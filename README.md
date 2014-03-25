@@ -1,3 +1,6 @@
+Not maintained
+--------------
+I no longer maintain or use this. Please have a look at http://adamwhitcroft.com/apaxy/. He seem to be doing something similar as this :-)
 
 ABOUT
 -----
